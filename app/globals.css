@@ -8,6 +8,7 @@
   box-sizing: border-box;
   /* font-family: "Eudoxus Sans", sans-serif; */
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent; 
 }
 
 
@@ -260,8 +261,8 @@
 
 
 
-.value_card_nurture {
-  background: url('/nurture.png');
+.value_card_curiousity {
+  background: url('/curiousity.jpeg');
   background-size: cover;
 }
 
@@ -286,7 +287,7 @@
   background-size: cover;
 }
 
-.value_card_innovation::before, .value_card_nurture::before, .value_card_collaboration::before, .value_card_integrity::before, .value_card_inclusion::before, .value_card_empowerment::before {
+.value_card_innovation::before, .value_card_curiousity::before, .value_card_collaboration::before, .value_card_integrity::before, .value_card_inclusion::before, .value_card_empowerment::before {
   content: "";
   position: absolute;
   top: 0;
@@ -297,3 +298,20 @@
   z-index: 1
 
 }
+
+*:focus {
+  background-color: transparent; /* Remove background color */
+  box-shadow: none; /* Remove any box shadow */
+  outline: none; /* Remove the outline */
+}
+
+::selection {
+    color: none;
+    background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    color: none;
+    background: none;
+}
+/* for removing the highlight */

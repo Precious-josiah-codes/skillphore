@@ -35,8 +35,9 @@ const Navbar = ({ displaySideMenu, setDisplaySideMenu }) => {
           <LogoIcon color="black" />
           <LogoIcon color="black" />
           <LogoIcon color="black" />
+          <LogoIcon color="black" />
         </div>
-        <div className="leading-4 mt-2">
+        <div className="leading-4 ">
           <h1>SKILLPHORE</h1>
           <p className="text-xs font-light text-[#CCAB00]">
             Transforming data learning.
@@ -60,7 +61,7 @@ const Navbar = ({ displaySideMenu, setDisplaySideMenu }) => {
         >
           <span>Mentorship</span>
         </Link>
-        <Link href="#contact">
+        <Link href="#footer">
           <span>Contact</span>
         </Link>
       </div>

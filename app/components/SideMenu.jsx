@@ -9,6 +9,7 @@ const SideMenu = ({ displaySideMenu, setDisplaySideMenu }) => {
     { url: "exploreCourses", urlName: "Courses" },
     { url: "financialAid", urlName: "Financial Aid" },
     { url: "mentorship", urlName: "Mentorship" },
+    { url: "footer", urlName: "Contact Us" },
   ];
   const linkStyle = "mb-6";
   return (

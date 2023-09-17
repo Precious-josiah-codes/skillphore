@@ -111,7 +111,10 @@ export default function Home() {
       {/* end frequently asked questions */}
 
       {/* start footer */}
-      <Footer />
+      <section ref={sectionRefs.footer} id="footer">
+        <Footer />
+      </section>
+
       {/* end footer */}
     </main>
   );

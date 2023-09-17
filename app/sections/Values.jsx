@@ -39,7 +39,7 @@ const Values = () => {
   const styles = {
     myswiper: "",
     swiperNav:
-      "w-fit hover:border hover:border-gray-400 p-3 cursor-pointer rounded-full hidden sm:flex justify-center items-center mt-6",
+      "w-fit hover:border hover:border-gray-400 p-3 cursor-pointer rounded-full flex justify-center items-center mt-6",
     swiperNavIcons: "w-6 h-6 text-basic text-black",
   };
 
@@ -52,7 +52,7 @@ const Values = () => {
   });
 
   return (
-    <section className="sm:h-[80vh] h-[60vh] mt-[4rem]">
+    <section className="sm:h-[80vh] h-[70vh] mt-[4rem]">
       <motion.h1
         variants={animationOne}
         initial="hidden"
@@ -60,7 +60,7 @@ const Values = () => {
         viewport={{ once: true }}
         className="heading-text"
       >
-        Our Values
+        Core Values
       </motion.h1>
 
       {/* values */}
@@ -115,7 +115,7 @@ const Values = () => {
           {/* N */}
           <SwiperSlide>
             <div
-              className={`${valuesStyle} value_card_nurture`}
+              className={`${valuesStyle} value_card_curiousity`}
               onMouseEnter={() => setIsNFlipped(!isNFlipped)}
               onMouseLeave={() => setIsNFlipped(!isNFlipped)}
             >
@@ -124,7 +124,7 @@ const Values = () => {
                 <ValueCard
                   content={
                     <div>
-                      <div className={valueTitle}>Nurture</div>
+                      <div className={valueTitle}>Never-ending curiosity</div>
                       <div className={valueSubTitle}>
                         Never-ending curiosity: Cultivate a thirst for knowledge
                         and continuous learning, instilling a passion for
