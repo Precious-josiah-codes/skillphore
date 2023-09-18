@@ -6,7 +6,7 @@ import { animationOne, animationThree, animationTwo } from "../animation";
 
 const FinancialAid = () => {
   return (
-    <section className="flex justify-between w-full sm:h-auto h-[124vh] sm:mt-[4rem] mt-[1rem]">
+    <section className="flex justify-between w-full sm:h-auto h-[124vh] sm:mt-[4rem]">
       <div className="flex sm:flex-row flex-col-reverse justify-between w-full">
         {/* left section */}
         <motion.div

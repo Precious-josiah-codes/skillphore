@@ -55,7 +55,7 @@ const Values = () => {
   });
 
   return (
-    <section className="sm:h-[80vh] h-[70vh] mt-[4rem]">
+    <section className="sm:h-[80vh] h-[65vh] sm:mt-[4rem] mt-[2rem]">
       <motion.h1
         variants={animationOne}
         initial="hidden"
@@ -63,7 +63,7 @@ const Values = () => {
         viewport={{ once: true }}
         className="heading-text"
       >
-        Core Values
+        Our Core Values
       </motion.h1>
 
       {/* values */}

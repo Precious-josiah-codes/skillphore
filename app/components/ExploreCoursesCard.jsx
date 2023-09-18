@@ -36,7 +36,9 @@ const ExploreCoursesCard = ({ data }) => {
 
           {/* name and occupation */}
           <div className="block ">
-            <h1 className="text-white font-medium text-base">{data.tutor}</h1>
+            <h1 className="text-white font-medium text-base w-[10rem] leading-4">
+              {data.tutor}
+            </h1>
           </div>
         </div>
       </div>

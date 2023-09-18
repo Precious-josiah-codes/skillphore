@@ -54,14 +54,10 @@ const Navbar = ({ displaySideMenu, setDisplaySideMenu }) => {
         <Link href="#" className="navbar-link" data-target="financialAid">
           <span>Financial Aid</span>
         </Link>
-        <Link
-          href="#mentorship"
-          className="navbar-link"
-          data-target="mentorship"
-        >
+        <Link href="#" className="navbar-link" data-target="mentorship">
           <span>Mentorship</span>
         </Link>
-        <Link href="#footer">
+        <Link href="#" className="navbar-link" data-target="footer">
           <span>Contact</span>
         </Link>
       </div>

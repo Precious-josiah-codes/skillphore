@@ -138,20 +138,13 @@ const Skills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="sm:w-[68%] w-full sm:h-[85vh] h-[43vh] relative "
+          className="sm:w-[68%] w-full sm:h-[85vh] h-[53vh] relative "
         >
           <img
             src="./learn.gif"
             alt=""
-            className="rounded-[10px] object-cover w-full"
+            className="rounded-[10px] object-cover h-full w-full"
           />
-          {/* <Image
-            src=''
-            fill
-            sizes="100vw"
-            alt="Picture of the author"
-            
-          /> */}
           <div class="absolute sm:-top-[4rem] -top-[2rem] sm:left-[13rem] left-[6rem] inset-0 bg-[#CCAB00] sm:h-[8rem] sm:w-[34rem] h-[4rem] w-[14rem] flex justify-center items-center divide-x-2 divide-black">
             <div className="flex items-center space-x-3 sm:pr-9">
               <h1 className="text-5xl sm:block hidden">100</h1>
