@@ -8,6 +8,8 @@ import {
   animationTwo,
 } from "../animation";
 
+import learn from "../../public/learn.gif";
+
 export const Skilled = () => {
   return (
     <svg
@@ -139,7 +141,7 @@ const Skills = () => {
           className="sm:w-[68%] w-full sm:h-[85vh] h-[43vh] relative "
         >
           <Image
-            src="/learn.gif"
+            src={learn}
             fill
             sizes="100vw"
             alt="Picture of the author"
