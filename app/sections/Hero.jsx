@@ -136,7 +136,7 @@ const Hero = () => {
         transition={{ duration: 0.3, delay: 0.4, type: "spring" }}
         className="sm:hidden flex sm:justify-between sm:space-x-6 h-[25rem] mt-12"
       >
-        <Swiper slidesPerView={"auto"} spaceBetween={30} className="mySwiper">
+        <Swiper slidesPerView={"auto"} spaceBetween={10} className="mySwiper">
           {card.map((cd, index) => (
             <SwiperSlide>
               <div key={index} className="w-full">

@@ -24,6 +24,7 @@ export const Skilled = () => {
     </svg>
   );
 };
+
 export const Trained = () => {
   return (
     <svg
@@ -41,6 +42,7 @@ export const Trained = () => {
     </svg>
   );
 };
+
 export const Mentored = () => {
   return (
     <svg

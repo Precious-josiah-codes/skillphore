@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,6 +18,7 @@ import {
   animationThree,
   animationTwo,
 } from "../animation";
+import { useMediaQuery } from "react-responsive";
 
 const ExploreCourses = () => {
   const data = [
@@ -26,38 +27,10 @@ const ExploreCourses = () => {
       category: "Data Analytics",
       link: "https://www.youtube.com/watch?v=WnP6jDvupiY",
       image: "/data_analytics.jpg",
-      duration: "26 Minutes",
-    },
-
-    {
-      name: "Data Analytics With Excel",
-      category: "Spreadsheet",
-      link: "https://www.youtube.com/playlist?list=PLUaB-1hjhk8Hyd5NiPQ9CND82vNodlFF5",
-      image: "/spreadsheet.jpeg",
-      duration: "2 Hours 47 Minutes",
-    },
-
-    {
-      name: "Data Analysis With SQL",
-      category: "Database",
-      link: "https://www.youtube.com/playlist?list=PLUaB-1hjhk8GT6N5ne2qpf603sF26m2PW",
-      image: "/database.png",
-      duration: "2 Hours 47 Minutes",
-    },
-
-    {
-      name: "Tableau",
-      category: "Visualization",
-      link: "https://www.youtube.com/playlist?list=PLUaB-1hjhk8GwbqoVmo_5zuhOa0Tcl3xC",
-      image: "/visualization.png",
-      duration: "1 Hour 36 Minutes",
-    },
-    {
-      name: "Basic Statistics",
-      category: "Statistics",
-      link: "https://www.youtube.com/playlist?list=PLyLpEs0x9Bnkdzf7bx1J3hMZwZfBhan0e",
-      image: "/statistics.jpeg",
-      duration: "54 Minutes",
+      duration: "2 Minutes",
+      tutor: "University of Houston Libaries",
+      tutorImage:
+        "https://yt3.ggpht.com/ytc/AOPolaQYa-SdoV64gdCdhamVSRiOGUiEOWLPELmUEDekRg=s48-c-k-c0x00ffffff-no-rj",
     },
 
     {
@@ -65,16 +38,36 @@ const ExploreCourses = () => {
       category: "Programming",
       link: "https://youtu.be/6sLkF-F9Oh0?si=QGVN9GrjkAbNb5Ye",
       image: "/programming.png",
-      duration: "2 Hours 54 Minutes",
+      duration: "2 Hours 56 Minutes",
+      tutor: "Analytics Vidhya",
+      tutorImage:
+        "https://yt3.googleusercontent.com/ytc/AOPolaQmXVg7tRM7pMT_NPfBcAbAxUNHLp1URuKnulxEsik=s176-c-k-c0x00ffffff-no-rj",
     },
     {
-      name: "How to present your data",
-      category: "Data Storytelling & Presentation",
-      link: "https://drive.google.com/drive/folders/1-wtkkR0UASkT4F-ZPW7iKiCdBBwbEVDv",
-      image: "/story_telling.jpeg",
+      name: "Data Analysis With SQL",
+      category: "Database",
+      link: "https://youtu.be/8rO7ztF4NtU?si=7vD5vCc-uivfW2s-",
+      image: "/database.png",
+      duration: "54 Minutes",
+      tutor: "Alex the Analyst",
+      tutorImage:
+        "https://yt3.ggpht.com/ytc/AOPolaQx_x_pSH8wDisQQhQh9Y9K9MOaylGdX7UqpsKF=s48-c-k-c0x00ffffff-no-rj",
+    },
+    {
+      name: "R",
+      category: "Programming",
+      link: "https://youtu.be/_V8eKsto3Ug?si=yit9lfvarSOSR9HJ",
+      image: "/programming.png",
       duration: "2 Hours 10 Minutes",
+      tutor: "FreeCodeCamp",
+      tutorImage:
+        "https://yt3.ggpht.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s48-c-k-c0x00ffffff-no-rj",
     },
   ];
+
+  const isMobile = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
 
   // swiper navigation element
   const swiperNavLeft = useRef(null);
@@ -128,7 +121,7 @@ const ExploreCourses = () => {
           swiper.navigation.update();
         }}
         slidesPerView={"auto"}
-        spaceBetween={20}
+        spaceBetween={isMobile ? 1 : 20}
         modules={[Autoplay, Navigation]}
         navigation={{
           prevEl: swiperNavLeft.current,

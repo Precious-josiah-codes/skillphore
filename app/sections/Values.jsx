@@ -14,6 +14,8 @@ import { useRef, useState } from "react";
 import ValueCard from "../components/ValueCard";
 import { useMediaQuery } from "react-responsive";
 import { animationOne, animationTwo } from "../animation";
+import SlideArrowRight from "../components/SlideArrowRight";
+import SlideArrowLeft from "../components/SlideArrowLeft";
 
 const Values = () => {
   const [isIFlipped, setIsIFlipped] = useState(true);
@@ -22,6 +24,7 @@ const Values = () => {
   const [isIIFlipped, setIsIIFlipped] = useState(true);
   const [isTFlipped, setIsTFlipped] = useState(true);
   const [isEFlipped, setIsEFlipped] = useState(true);
+  // const [slide, setSlide] = useState(true);
 
   // swiper navigation element
   const swiperNavLeft = useRef(null);
@@ -39,7 +42,7 @@ const Values = () => {
   const styles = {
     myswiper: "",
     swiperNav:
-      "w-fit hover:border hover:border-gray-400 p-3 cursor-pointer rounded-full flex justify-center items-center mt-6",
+      "w-fit hover:border hover:border-gray-400 p-3 cursor-pointer rounded-full hidden sm:flex justify-center items-center mt-6",
     swiperNavIcons: "w-6 h-6 text-basic text-black",
   };
 
@@ -69,7 +72,7 @@ const Values = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="h-[25rem]"
+        className="h-[23rem]"
       >
         {/* values card */}
         <Swiper
@@ -79,6 +82,8 @@ const Values = () => {
             swiper.navigation.init();
             swiper.navigation.update();
           }}
+          // onReachEnd={() => setSlide(!slide)}
+          // onReachBeginning={() => setSlide(!slide)}
           slidesPerView={"auto"}
           spaceBetween={isMobile ? 8 : 20}
           modules={[Navigation]}
@@ -272,7 +277,7 @@ const Values = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className={`${styles.swiperNavIcons} w-6 h-6`}
+              className={`${styles.swiperNavIcons}`}
             >
               <path
                 strokeLinecap="round"
@@ -281,6 +286,11 @@ const Values = () => {
               />
             </svg>
           </div>
+
+          {/* sliding animation arrow */}
+          {/* <div className="sm:hidden">
+            {slide ? <SlideArrowRight /> : <SlideArrowLeft />}
+          </div> */}
         </div>
       </motion.div>
     </section>

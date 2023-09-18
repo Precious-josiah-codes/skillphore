@@ -21,6 +21,24 @@ const ExploreCoursesCard = ({ data }) => {
         <div className="bg-slate-800 text-white rounded-full w-fit absolute top-0 left-4 px-3 py-1 text-xs">
           {data.category}
         </div>
+
+        <div className="flex items-center space-x-3 absolute bottom-[6rem] left-4">
+          {/* profile photo */}
+          <div className="flex w-[2rem] h-[2rem] rounded-full overflow-hidden border-2">
+            <Image
+              className="object-cover"
+              src={data.tutorImage}
+              width={500}
+              height={500}
+              alt="Picture of the author"
+            />
+          </div>
+
+          {/* name and occupation */}
+          <div className="block ">
+            <h1 className="text-white font-medium text-base">{data.tutor}</h1>
+          </div>
+        </div>
       </div>
 
       {/* card text */}
