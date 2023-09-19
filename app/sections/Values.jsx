@@ -122,7 +122,7 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_curiousity`}
-              onMouseEnter={() => !isMobile && etIsNFlipped(!isNFlipped)}
+              onMouseEnter={() => !isMobile && setIsNFlipped(!isNFlipped)}
               onMouseLeave={() => !isMobile && setIsNFlipped(!isNFlipped)}
               onTouchStart={() => setIsNFlipped(!isNFlipped)}
             >
@@ -133,9 +133,9 @@ const Values = () => {
                     <div>
                       <div className={valueTitle}>Never-ending curiosity</div>
                       <div className={valueSubTitle}>
-                        Never-ending curiosity: Cultivate a thirst for knowledge
-                        and continuous learning, instilling a passion for
-                        exploring the ever-evolving world of data analytics.
+                        Cultivate a thirst for knowledge and continuous
+                        learning, instilling a passion for exploring the
+                        ever-evolving world of data analytics.
                       </div>
                     </div>
                   }

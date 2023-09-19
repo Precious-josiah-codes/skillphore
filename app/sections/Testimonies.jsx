@@ -24,31 +24,31 @@ const Testimonies = () => {
     {
       name: "Jessica Atari-Ata",
       testimony:
-        "Skillphore transformed my data analytics journey with structured guidance, a vibrant community, and dedicated mentors, creating an empowering ecosystem for success.",
+        "Skillphore changed my data analytics journey with a clear roadmap, a vibrant community, and supportive mentors—a true empowering ecosystem for success in the world of data analytics.",
       image: "/anonymous.png",
     },
     {
       name: "Nwume Victor",
       testimony:
-        "In my recent achievement, I secured a data analytics role. This platform significantly contributed to honing my skills, with Sandra and Emmanuel playing pivotal roles in my growth.",
+        "Got a data analytics role this month, thanks to this platform. Sandra kept us active with projects, added 4 to my portfolio. Emmanuel was a lifesaver, especially with SQL. Grateful for their help!",
       image: "/victor.png",
     },
     {
       name: "Blessing Ekwere",
       testimony:
-        "Skillphore's guidance and mentorship shaped my data skills. I urge data enthusiasts to join this supportive community for growth and thriving.",
+        "Skillphore, thank you. Your guidance and mentorship shaped my data skills at the start of my journey. I encourage data enthusiasts to join this supportive community for growth.",
       image: "/blessing.png",
     },
     {
       name: "Okene Maureen",
       testimony:
-        "Before diving into data analytics, I struggled with teamwork. Joining the community taught me collaboration, enhanced my skills, and now I'm focused on personal projects and portfolio improvement.",
+        "Before data analytics, teamwork was a challenge. Joining this community  changed that; project collaborations taught valuable analytics skills. Now, I’m more focused on enhancing my portfolio with personal projects.",
       image: "/maureen.png",
     },
     {
       name: "Jennifer Anene",
       testimony:
-        "In my Google Data Analytics Certificate Course, I encountered numerous challenges but persevered with Skillphore mentors' support. Now, I'm completing my first data analytics project triumphantly.",
+        "The Google Data Analytics Course was tough for me; I almost gave up, but a Skillphore mentor kept me going. I have completed the program and now diving into my first data analytics project.",
       image: "/anonymous.png",
     },
   ];
