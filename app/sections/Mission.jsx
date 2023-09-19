@@ -79,7 +79,7 @@ const Mission = () => {
           viewport={{ once: true }}
           className="sm:text-[2rem] text-[1.75rem] sm:leading-[3.75rem] font-[400] heading-text"
         >
-          Core Mission.
+          Mission.
         </motion.h1>
       </div>
 
