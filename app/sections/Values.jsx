@@ -97,8 +97,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_innovation`}
-              onMouseEnter={() => setIsIFlipped(!isIFlipped)}
-              onMouseLeave={() => setIsIFlipped(!isIFlipped)}
+              onMouseEnter={() => !isMobile && setIsIFlipped(!isIFlipped)}
+              onMouseLeave={() => !isMobile && setIsIFlipped(!isIFlipped)}
               onTouchStart={() => setIsIFlipped(!isIFlipped)}
             >
               {isIFlipped && <ValueCard content="I" />}
@@ -122,8 +122,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_curiousity`}
-              onMouseEnter={() => setIsNFlipped(!isNFlipped)}
-              onMouseLeave={() => setIsNFlipped(!isNFlipped)}
+              onMouseEnter={() => !isMobile && etIsNFlipped(!isNFlipped)}
+              onMouseLeave={() => !isMobile && setIsNFlipped(!isNFlipped)}
               onTouchStart={() => setIsNFlipped(!isNFlipped)}
             >
               {isNFlipped && <ValueCard content="N" />}
@@ -147,8 +147,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_collaboration`}
-              onMouseEnter={() => setIsCFlipped(!isCFlipped)}
-              onMouseLeave={() => setIsCFlipped(!isCFlipped)}
+              onMouseEnter={() => !isMobile && setIsCFlipped(!isCFlipped)}
+              onMouseLeave={() => !isMobile && setIsCFlipped(!isCFlipped)}
               onTouchStart={() => setIsCFlipped(!isCFlipped)}
             >
               {isCFlipped && <ValueCard content="C" />}
@@ -172,8 +172,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_integrity`}
-              onMouseEnter={() => setIsIIFlipped(!isIIFlipped)}
-              onMouseLeave={() => setIsIIFlipped(!isIIFlipped)}
+              onMouseEnter={() => !isMobile && setIsIIFlipped(!isIIFlipped)}
+              onMouseLeave={() => !isMobile && setIsIIFlipped(!isIIFlipped)}
               onTouchStart={() => setIsIIFlipped(!isIIFlipped)}
             >
               {isIIFlipped && <ValueCard content="I" />}
@@ -197,8 +197,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_inclusion`}
-              onMouseEnter={() => setIsTFlipped(!isTFlipped)}
-              onMouseLeave={() => setIsTFlipped(!isTFlipped)}
+              onMouseEnter={() => !isMobile && setIsTFlipped(!isTFlipped)}
+              onMouseLeave={() => !isMobile && setIsTFlipped(!isTFlipped)}
               onTouchStart={() => setIsTFlipped(!isTFlipped)}
             >
               {isTFlipped && <ValueCard content="T" />}
@@ -223,8 +223,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_empowerment`}
-              onMouseEnter={() => setIsEFlipped(!isEFlipped)}
-              onMouseLeave={() => setIsEFlipped(!isEFlipped)}
+              onMouseEnter={() => !isMobile && setIsEFlipped(!isEFlipped)}
+              onMouseLeave={() => !isMobile && setIsEFlipped(!isEFlipped)}
               onTouchStart={() => setIsEFlipped(!isEFlipped)}
             >
               {isEFlipped && <ValueCard content="E" />}
