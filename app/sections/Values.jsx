@@ -99,7 +99,7 @@ const Values = () => {
               className={`${valuesStyle} value_card_innovation`}
               onMouseEnter={() => setIsIFlipped(!isIFlipped)}
               onMouseLeave={() => setIsIFlipped(!isIFlipped)}
-              onTouchStart={() => setIsEFlipped(!isEFlipped)}
+              onTouchStart={() => setIsIFlipped(!isIFlipped)}
             >
               {isIFlipped && <ValueCard content="I" />}
               {!isIFlipped && (
@@ -124,7 +124,7 @@ const Values = () => {
               className={`${valuesStyle} value_card_curiousity`}
               onMouseEnter={() => setIsNFlipped(!isNFlipped)}
               onMouseLeave={() => setIsNFlipped(!isNFlipped)}
-              onTouchStart={() => setIsEFlipped(!isEFlipped)}
+              onTouchStart={() => setIsNFlipped(!isNFlipped)}
             >
               {isNFlipped && <ValueCard content="N" />}
               {!isNFlipped && (
@@ -149,7 +149,7 @@ const Values = () => {
               className={`${valuesStyle} value_card_collaboration`}
               onMouseEnter={() => setIsCFlipped(!isCFlipped)}
               onMouseLeave={() => setIsCFlipped(!isCFlipped)}
-              onTouchStart={() => setIsEFlipped(!isEFlipped)}
+              onTouchStart={() => setIsCFlipped(!isCFlipped)}
             >
               {isCFlipped && <ValueCard content="C" />}
               {!isCFlipped && (
@@ -174,7 +174,7 @@ const Values = () => {
               className={`${valuesStyle} value_card_integrity`}
               onMouseEnter={() => setIsIIFlipped(!isIIFlipped)}
               onMouseLeave={() => setIsIIFlipped(!isIIFlipped)}
-              onTouchStart={() => setIsEFlipped(!isEFlipped)}
+              onTouchStart={() => setIsIIFlipped(!isIIFlipped)}
             >
               {isIIFlipped && <ValueCard content="I" />}
               {!isIIFlipped && (
@@ -199,7 +199,7 @@ const Values = () => {
               className={`${valuesStyle} value_card_inclusion`}
               onMouseEnter={() => setIsTFlipped(!isTFlipped)}
               onMouseLeave={() => setIsTFlipped(!isTFlipped)}
-              onTouchStart={() => setIsEFlipped(!isEFlipped)}
+              onTouchStart={() => setIsTFlipped(!isTFlipped)}
             >
               {isTFlipped && <ValueCard content="T" />}
               {!isTFlipped && (
