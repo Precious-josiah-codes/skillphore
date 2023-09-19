@@ -218,8 +218,8 @@ const Values = () => {
           <SwiperSlide>
             <div
               className={`${valuesStyle} value_card_empowerment`}
-              // onMouseEnter={() => setIsEFlipped(!isEFlipped)}
-              // onMouseLeave={() => setIsEFlipped(!isEFlipped)}
+              onMouseEnter={() => setIsEFlipped(!isEFlipped)}
+              onMouseLeave={() => setIsEFlipped(!isEFlipped)}
               onTouchStart={() => setIsEFlipped(!isEFlipped)}
             >
               {isEFlipped && <ValueCard content="E" />}
