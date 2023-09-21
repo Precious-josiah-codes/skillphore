@@ -133,7 +133,7 @@ const Values = () => {
                     <div>
                       <div className={valueTitle}>Never-ending curiosity</div>
                       <div className={valueSubTitle}>
-                        Cultivate a thirst for knowledge and continuous
+                        We cultivate a thirst for knowledge and continuous
                         learning, instilling a passion for exploring the
                         ever-evolving world of data analytics.
                       </div>

@@ -5,11 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import "../custom-swiper2.css";
 
 // import required modules
-import { Navigation } from "swiper/modules";
-import { useRef } from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 
 // import { StoreContext } from "../context/Store";
@@ -19,7 +20,6 @@ import { useMediaQuery } from "react-responsive";
 import { animationOne, animationTwo } from "../animation";
 
 const Testimonies = () => {
-  //   const { isMobile } = useContext(StoreContext);
   const testimonies = [
     {
       name: "Jessica Atari-Ata",
@@ -52,28 +52,6 @@ const Testimonies = () => {
       image: "/anonymous.png",
     },
   ];
-  // swiper navigation element
-  const swiperNavLeft = useRef(null);
-  const swiperNavRight = useRef(null);
-
-  // right navigation click
-  // to turn off display for left navigation
-  const rightNav = () => (swiperNavLeft.current.style.display = "flex");
-
-  // left navigation click
-  // to turn off display for right navigation
-  const leftNav = () => {
-    swiperNavRight.current.style.display = "flex";
-    console.log("hello");
-  };
-
-  // styles
-  const styles = {
-    myswiper: "",
-    swiperNav:
-      "w-fit hover:border hover:border-gray-400 p-3 cursor-pointer rounded-full hidden sm:flex justify-center items-center",
-    swiperNavIcons: "w-6 h-6 text-basic text-black",
-  };
 
   const isMobile = useMediaQuery({
     query: "(max-width: 600px)",
@@ -101,19 +79,15 @@ const Testimonies = () => {
         className="h-[23rem] cursor-grab"
       >
         <Swiper
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = swiperNavLeft.current;
-            swiper.params.navigation.nextEl = swiperNavRight.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
           }}
           slidesPerView={"auto"}
           spaceBetween={isMobile ? 7 : 30}
-          modules={[Navigation]}
-          navigation={{
-            prevEl: swiperNavLeft.current,
-            nextEl: swiperNavRight.current,
-          }}
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation={isMobile ? false : true}
+          pagination={{ clickable: true }}
           className="mySwiper"
         >
           {testimonies.map((testimony, index) => (
@@ -123,49 +97,6 @@ const Testimonies = () => {
           ))}
         </Swiper>
       </motion.div>
-
-      {/* navigations */}
-      <div className="flex w-fit mx-auto space-x-6">
-        {/* left navigation */}
-        <div ref={swiperNavLeft} className={styles.swiperNav} onClick={leftNav}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className={`${styles.swiperNavIcons} w-6 h-6`}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-            />
-          </svg>
-        </div>
-
-        {/* right navigation */}
-        <div
-          ref={swiperNavRight}
-          className={styles.swiperNav}
-          onClick={rightNav}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className={`${styles.swiperNavIcons} w-6 h-6`}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-            />
-          </svg>
-        </div>
-      </div>
     </section>
   );
 };
